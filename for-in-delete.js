@@ -23,7 +23,7 @@
 //   console.log(values[key])
 // }
 
-/*
+ /*
   In this next example, we are accessing the property names themselves. Uncomment the code below, run it and look at what prints in the console.
 */
 
@@ -40,7 +40,11 @@
 */
 
 function showValues( obj ) {
-  //Code Here
+  let stringOfValues = ''
+  for(var key in obj) {
+    stringOfValues = `${stringOfValues} ${obj.key}`
+  }
+return stringOfValues  
 }
 
 
@@ -53,7 +57,16 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function greaterThan10( obj ) {
+  const updatedObj = Object.assign({}, obj)
+  for(var key in updatedObj){
+    if(key > 10){
+      
+    }
+  }
+
+  return updatedObj
+}
 
 
 
@@ -65,7 +78,15 @@ function showValues( obj ) {
   Return the updated object.
 */
 
-//Code Here
+function double( obj ){
+  const updatedObj = Object.assign({}, obj)
+
+  for (let key in updatedObj){
+    updatedObj.key *= 2
+  }
+
+  return updatedObj
+}
 
 
 
@@ -79,7 +100,17 @@ function showValues( obj ) {
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-//Code Here
+function secrets( obj ) {
+  let newStr = ''
+
+  for (var key in obj) {
+    if (key.includes('sh')){
+      newStr = `${newStr} ${obj.key}`
+    }
+  }
+
+  return newStr
+}
 
 
 
