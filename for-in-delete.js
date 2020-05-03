@@ -101,12 +101,10 @@ function double( obj ){
 */
 
 function secrets( obj ) {
-  let newStr = ''
+  newStr = ''
+  
+  for (let key in obj){
 
-  for (var key in obj) {
-    if (key.includes('sh')){
-      newStr = `${newStr} ${obj.key}`
-    }
   }
 
   return newStr
@@ -141,7 +139,12 @@ function secrets( obj ) {
   Delete the property password and return the object.
 */
 
-//Code Here
+function removePassword( obj ){
+  for (var key in obj){
+    delete obj['password']
+  }
+  return obj
+}
 
 
 
@@ -173,7 +176,11 @@ var deleteTheBigNumbers = {
   Return the updated object.
 */
 
-//Code Here
+function startsWithK( obj ){
+  
+
+  return obj
+} 
 
 
 
@@ -188,6 +195,16 @@ var deleteTheBigNumbers = {
   (hint: the method includes() may be of use...)
 */
 
-//Code Here
+function hiddenTreasure( obj ){
+  for (let key in obj) {
+    if (key.includes('treasure')){
+
+    } else {
+      delete obj[key]
+    }
+  }
+
+  return obj
+}
 
 
