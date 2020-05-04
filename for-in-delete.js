@@ -11,13 +11,13 @@
   In the example below, we are accessing the property values. Uncomment the code below, run it and look at what prints in the console.
 */
 
-// var values = {
-//   one: 'These',
-//   two: ' are',
-//   three: ' the',
-//   four: ' property',
-//   five: ' values.'
-// } 
+   var values = {
+   one: 'These',
+   two: ' are',
+   three: ' the',
+   four: ' property',
+   five: ' values.'
+ } 
 
 // for(var key in values) {
 //   console.log(values[key])
@@ -40,11 +40,12 @@
 */
 
 function showValues( obj ) {
-  let stringOfValues = ''
+  let newStr = ''
   for(var key in obj) {
-    stringOfValues = `${stringOfValues} ${obj.key}`
+    newStr = `${newStr}${obj[key]}`
   }
-return stringOfValues  
+  
+return newStr
 }
 
 
@@ -57,16 +58,16 @@ return stringOfValues
   Return the updated object.
 */
 
-function greaterThan10( obj ) {
-  const updatedObj = Object.assign({}, obj)
-  for(var key in updatedObj){
-    if(key > 10){
+// function greaterThan10( obj ) {
+//   const updatedObj = Object.assign({}, obj)
+//   for(var key in updatedObj){
+//     if(key > 10){
       
-    }
-  }
+//     }
+//   }
 
-  return updatedObj
-}
+//   return updatedObj
+// }
 
 
 
@@ -78,15 +79,15 @@ function greaterThan10( obj ) {
   Return the updated object.
 */
 
-function double( obj ){
-  const updatedObj = Object.assign({}, obj)
+// function double( obj ){
+//   const updatedObj = Object.assign({}, obj)
 
-  for (let key in updatedObj){
-    updatedObj.key *= 2
-  }
+//   for (let key in updatedObj){
+//     updatedObj.key *= 2
+//   }
 
-  return updatedObj
-}
+//   return updatedObj
+// }
 
 
 
@@ -100,15 +101,15 @@ function double( obj ){
   By the end of the for in loop, you should have a sentence, return that sentence.
 */
 
-function secrets( obj ) {
-  newStr = ''
+// function secrets( obj ) {
+//   newStr = ''
   
-  for (let key in obj){
+//   for (let key in obj){
 
-  }
+//   }
 
-  return newStr
-}
+//   return newStr
+// }
 
 
 
@@ -139,12 +140,12 @@ function secrets( obj ) {
   Delete the property password and return the object.
 */
 
-function removePassword( obj ){
-  for (var key in obj){
-    delete obj['password']
-  }
-  return obj
-}
+// function removePassword( obj ){
+//   for (var key in obj){
+//     delete obj['password']
+//   }
+//   return obj
+// }
 
 
 
@@ -163,15 +164,15 @@ var deleteTheBigNumbers = {
   Write a for in loop that deletes every property from the object deleteTheBigNumbers whose value is greater than 100.
 */
 
-function deleteBigNumbers( obj ){
-  for (let key in obj){
-    if (obj[key] > 100){
-      delete obj[key]
-    }
-  }
+// function deleteBigNumbers( obj ){
+//   for (let key in obj){
+//     if (obj[key] > 100){
+//       delete obj[key]
+//     }
+//   }
 
-  return obj
-}
+//   return obj
+// }
 
 
 
@@ -184,15 +185,15 @@ function deleteBigNumbers( obj ){
   Return the updated object.
 */
 
-function startsWithK( obj ){
-  for (let key in obj) {
-    if (key.indexOf('k', 0)){
-      delete obj.key
-    }
-  }
+// function startsWithK( obj ){
+//   for (let key in obj) {
+//     if (key.indexOf('k', 0)){
+//       delete obj.key
+//     }
+//   }
 
-  return obj
-} 
+//   return obj
+// } 
 
 
 
@@ -207,16 +208,16 @@ function startsWithK( obj ){
   (hint: the method includes() may be of use...)
 */
 
-function hiddenTreasure( obj ){
-  for (let key in obj) {
-    if (obj[key].includes('treasure')){
+// function hiddenTreasure( obj ){
+//   for (let key in obj) {
+//     if (obj[key].includes('treasure')){
 
-    } else {
-      delete obj[key]
-    }
-  }
+//     } else {
+//       delete obj[key]
+//     }
+//   }
 
-  return obj
-}
+//   return obj
+// }
 
 
