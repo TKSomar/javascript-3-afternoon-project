@@ -54,7 +54,11 @@ function greeting( obj ) {
 */
 
 function totalPopulation( obj ){
-  const {utah, california, texas, arizona} = obj
+  let utah = obj.utah
+  let california = obj.california
+  let texas = obj.texas
+  let arizona = obj.arizona
+
   return utah + california + texas + arizona
 }
 
@@ -112,10 +116,17 @@ function largeNumbers( {first, second, third} ){
   Find the longest array and return that array.
 */
 
-function numberGroups( {a, b, c} ){
-  let longestArray = 
-
-  
+function numberGroups( obj ) {
+  var longest = 0
+  var longestArray = []
+  for (let i = 0; i < obj.length; i++){
+    if (i.length > longest){
+      longest = i.length
+      longestArray.push(i)
+    } else if (i.length === longest){
+      longestArray.push(i)
+    }  
+  }
+  return longestArray
 }
-
 
