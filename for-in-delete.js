@@ -59,14 +59,14 @@ return newStr
 */
 
 function greaterThan10( obj ) {
-  const updatedObj = Object.assign({}, obj)
-  for(var key in updatedObj){
-    if(key > 10){
-      
+  console.log(obj)
+  for(var key in obj){
+    if(obj[key] > 10){
+      obj[key] = 0
     }
   }
 
-  return updatedObj
+  return obj
 }
 
 
@@ -80,13 +80,11 @@ function greaterThan10( obj ) {
 */
 
 function double( obj ){
-  const updatedObj = Object.assign({}, obj)
-
-  for (let key in updatedObj){
-    updatedObj.key *= 2
+  for (var key in obj){
+    obj[key] = obj[key] * 2
   }
 
-  return updatedObj
+  return obj
 }
 
 
@@ -105,7 +103,9 @@ function secrets( obj ) {
   newStr = ''
   
   for (let key in obj){
-
+    if (key.startsWith('sh')){
+      newStr = newStr + obj[key]
+    }
   }
 
   return newStr
@@ -165,11 +165,12 @@ var deleteTheBigNumbers = {
 */
 
 function deleteBigNumbers( obj ){
-  for (let i = 0; i < obj.length; i++) {
-    if (Object.values(obj)[i] > 100) {
-      delete Object.values(obj)[i]
-    }
+  for (var key in obj){
+    if (obj[key] > 100){
+      delete obj[key]
+    } 
   }
+
   return obj
 }
 
@@ -185,9 +186,10 @@ function deleteBigNumbers( obj ){
 */
 
 function startsWithK( obj ){
+  // console.log(obj)
   for (let key in obj) {
-    if (key.indexOf('k', 0)){
-      delete obj.key
+    if (key.startsWith('k', 0)){
+      delete obj[key]
     }
   }
 
