@@ -59,8 +59,8 @@ function employeeUpdater() {
       if (employees[i][j] === "Theo"){
         
       } else if (employees[i][j] === "Lorie"){
-        employees[i].department = "HR"
-        updatedEmployeesArr.push(employees[i])
+          employees[i]["deparment"] = "HR"
+          updatedEmployeesArr.push(employees[i])
       } else {
         updatedEmployeesArr.push(employees[i])
       }
@@ -86,6 +86,18 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
     3. Return the updated array.
 */
 
+function removeDuplicates() {
+  let updatedAccidentsArr = []
+
+  for (let i = 0; i < workplaceAccidents.length; i++){
+    for (let j = 0; workplaceAccidents.length; j++){
+      if (workplaceAccidents[i] !== workplaceAccidents[j]){
+        updatedAccidentsArr.push(workplaceAccidents[i])
+      }
+    }
+  }
+  return updatedAccidentsArr
+}
 
 
 
@@ -115,8 +127,8 @@ var cat = {
 */
 
 //Code Here
-var grumpyActivity;
-var fluffy2ndFriend;
+var grumpyActivity = cat.catFriends[0].activities[1]
+var fluffy2ndFriend = cat.catFriends[1].name
 
 
 
@@ -156,15 +168,10 @@ var myCar = {
     3. Change atFaultForAccident from true to false.
 */
 
-function recordCleaner() {
-  for (let i = 0; i < myCar.length; i++){
-    for (let j = 0; j < myCar[i][j]; j++){
-      if (myCar[i][j] === myCar.accidents){
-        myCar.accidents.atFaultForAccident = false;
-      }
-    }
+const recordCleaner = () => {
+  for (let i = 0; i < myCar.accidents.length; i++){
+    myCar.accidents[i].atFaultForAccident = false
   }
-  return myCar
 }
 
 
